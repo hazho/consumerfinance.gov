@@ -101,7 +101,6 @@ INSTALLED_APPS = (
     "django_elasticsearch_dsl",
 
     # Satellites
-    "comparisontool",
     "retirement_api",
     "ratechecker",
     "countylimits",
@@ -147,7 +146,6 @@ MIDDLEWARE = (
     "django.contrib.messages.middleware.MessageMiddleware",
     "core.middleware.ParseLinksMiddleware",
     "core.middleware.DownstreamCacheControlMiddleware",
-    "flags.middleware.FlagConditionsMiddleware",
     "core.middleware.SelfHealingMiddleware",
     "wagtail.contrib.redirects.middleware.RedirectMiddleware",
     "core.middleware.DeactivateTranslationsMiddleware",
@@ -444,6 +442,8 @@ else:
     ELASTICSEARCH_DSL = {
         "default": {"hosts": f"http://{ES7_HOST}:{ES_PORT}"}
     }
+
+ELASTICSEARCH_DSL_SIGNAL_PROCESSOR = 'search.elasticsearch_helpers.WagtailSignalProcessor'
 
 # S3 Configuration
 # https://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html#settings
