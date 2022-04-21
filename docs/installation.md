@@ -127,7 +127,7 @@ push to GitHub. This is to reduce the number of commits with failed lints, and
 to assist developers with linting without thinking.
 
 
-### Install our private fonts (optional)
+### Use our private fonts from a CDN
 
 consumerfinance.gov uses a proprietary licensed font, Avenir.
 
@@ -136,16 +136,6 @@ you can set the
 [`@use-font-cdn`](https://github.com/cfpb/consumerfinance.gov/blob/main/cfgov/unprocessed/css/main.less#L30)
 to `true` and rebuild the assets with `yarn build`.
 
-If you want to install self-hosted fonts locally, you can place the font files
-in `static.in/cfgov-fonts/fonts/`.
-
-If you are a CFPB employee, you can perform this step with:
-
-```
-git clone https://[GHE]/CFGOV/cfgov-fonts/ static.in/cfgov-fonts
-```
-
-Where `[GHE]` is our GitHub Enterprise URL.
 
 ### Build the frontend
 
@@ -336,7 +326,7 @@ that are specific to Postgres. The `CREATEDB` keyword above allows the
 After you have chosen a means to run PostgreSQL and Elasticsearch,
 [set up the environment](#set-up-the-environment),
 [set up a local Python environment](#set-up-a-local-python-environment),
-optionally [installed our private fonts](#install-our-private-fonts),
+optionally [used our private fonts from a CDN](#use-our-private-fonts-from-a-cdn),
 and [built the frontend](#build-the-frontend),
 all the Python dependencies for running locally can be installed:
 
