@@ -13,7 +13,7 @@
   },
   "license": "SEE LICENSE IN TERMS.md",
   "dependencies": {
-    "axios": "0.26.1",
+    "axios": "0.28.0",
     "fastdom": "^1.0.6",
     "jsonp-p": "^2.0.0",
     "normalize.css": "8.0.1",
